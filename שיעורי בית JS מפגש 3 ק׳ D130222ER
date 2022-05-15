@@ -36,3 +36,125 @@ function myArray(arr){
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Targil5</title>
+</head>
+<body>
+<script>
+const myCar ={
+     Manufacturer : 'Mercedes',
+     Model : 'G-wagon',
+     Year : 2021,
+     Owner : 'Elon Musk',
+     Hand : 2,
+     print: function(){
+         let table= '<table><tr><th>Manufacturer</th><th>Model</th><th>Year</th><th>Owner</th><th>Hand</th></tr>';
+         table += '<tr><td>' + this.Manufacturer + '</td><td>' + this.Model + '</td><td>' + this.Year + '</td><td>'+ this.Owner + '</td><td>' + this.Hand + '</td></tr>';
+         table += '</table>';
+         document.write(table);
+     },
+     changeOwner: function(newOwner){
+         this.Owner = newOwner;
+         this.Hand += 1;
+     }
+};
+function Car(Manufacturer,Model,Year,Owner,Hand){
+  this.Manufacturer = Manufacturer;
+  this.Model = Model;
+  this.Year = Year;
+  this.Owner = Owner;
+  this.Hand = Hand;
+    this.print= function(){
+         let table= '<table><tr><th>Manufacturer</th><th>Model</th><th>Year</th><th>Owner</th><th>Hand</th></tr>';
+         table += '<tr><td>' + this.Manufacturer + '</td><td>' + this.Model + '</td><td>' + this.Year + '</td><td>'+ this.Owner + '</td><td>' + this.Hand + '</td></tr>';
+         table += '</table>';
+         document.write(table);
+     };
+     this.changeOwner= function(newOwner){
+         this.Owner = newOwner;
+         this.Hand += 1;
+     };
+}
+const cars= [
+new Car('Honda','Civic',1989,'Vitali Haimov',19),
+new Car('Fiat','Pinto',2000,'Avi Bujerano',10),
+new Car('Mazda',6,2009,'Samuel Ziskovich',2),
+new Car('Toyota','Corolla',2010,'Shlomi Mangal',1),
+]
+</script>
+</body>
+</html>
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Targil5</title>
+</head>
+<body>
+<script>
+const myCar ={
+     Manufacturer : 'Mercedes',
+     Model : 'G-wagon',
+     Year : 2021,
+     Owner : 'Elon Musk',
+     Hand : 2,
+     print: function(){
+         let table= '<table><tr><th>Manufacturer</th><th>Model</th><th>Year</th><th>Owner</th><th>Hand</th></tr>';
+         table += '<tr><td>' + this.Manufacturer + '</td><td>' + this.Model + '</td><td>' + this.Year + '</td><td>'+ this.Owner + '</td><td>' + this.Hand + '</td></tr>';
+         table += '</table>';
+         document.write(table);
+     },
+     changeOwner: function(newOwner){
+         this.Owner = newOwner;
+         this.Hand += 1;
+     }
+};
+function Car(Manufacturer,Model,Year,Owner,Hand){
+  this.Manufacturer = Manufacturer;
+  this.Model = Model;
+  this.Year = Year;
+  this.Owner = Owner;
+  this.Hand = Hand;
+    this.print= function(){
+         let table= '<table><tr><th>Manufacturer</th><th>Model</th><th>Year</th><th>Owner</th><th>Hand</th></tr>';
+         table += '<tr><td>' + this.Manufacturer + '</td><td>' + this.Model + '</td><td>' + this.Year + '</td><td>'+ this.Owner + '</td><td>' + this.Hand + '</td></tr>';
+         table += '</table>';
+         document.write(table);
+     };
+     this.changeOwner= function(newOwner){
+         this.Owner = newOwner;
+         this.Hand += 1;
+     };
+}
+const cars= [
+new Car('Honda','Civic',1989,'Vitali Haimov',19),
+new Car('Fiat','Pinto',2000,'Avi Bujerano',10),
+new Car('Mazda',6,2009,'Samuel Ziskovich',2),
+new Car('Toyota','Corolla',2010,'Shlomi Mangal',1),
+]
+function addCar(cars){
+    let Manufacturer = prompt('Enter Manufacturer');
+    let Model = prompt('Enter Car Model');
+    let Year = +prompt('Enter Year');
+    let Owner = prompt('Enter Owner');
+    let Hand = +prompt('Enter Hand');
+
+    const newCar = new Car(Manufacturer,Model,Year,Owner,Hand);
+    cars.push(newCar);
+}
+</script>
+</body>
+</html>
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
