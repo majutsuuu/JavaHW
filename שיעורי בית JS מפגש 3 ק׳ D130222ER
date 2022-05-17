@@ -158,3 +158,53 @@ function addCar(cars){
 </html>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Targil5</title>
+</head>
+<body>
+<script>
+function Car(Manufacturer,Model,Year,Owner,Hand){
+  this.Manufacturer = Manufacturer;
+  this.Model = Model;
+  this.Year = Year;
+  this.Owner = Owner;
+  this.Hand = Hand;
+  this.printCar = function(){
+         let carTable= "<table><tr> <th>Manufacturer</th> <th>Model</th> <th>Year</th> <th>Owner</th> <th>Hand</th> </tr><td>" + this.Manufacturer + "</td><td>" + this.Model + "</td><td>" + this.Year + "</td><td>" + this.Owner + "</td><td>" + this.Hand + "</td></tr></table>";
+
+         document.write(carTable);
+     };
+     this.changeOwner= function(newOwner){
+         this.Owner = newOwner;
+         this.Hand += 1;
+     };
+};
+const cars= [
+    new Car('Honda','Civic',1989,'Vitali Haimov',19),
+    new Car('Fiat','Pinto',2000,'Avi Bujerano',10),
+    new Car('Mazda',6,2009,'Samuel Ziskovich',2),
+    new Car('Toyota','Corolla',2010,'Shlomi Mangal',1),
+]
+function addCar(){
+
+    cars.push(new Car (prompt("Please enter Car Manufacturer"),prompt("Please enter your Car Model"),prompt("Please enter your Car Year"),prompt("Please enter your Car Owner"),prompt("Please enter your Car Hand")));
+}
+   
+   
+    function showCars(){
+        document.write("<style>*{background-color:beige;text-align:center;} h1{ font-size: 35px; color:black; border:solid black 5px; background-color:purple; border-radius:15px;} td{ font-size: 35px; color:black; border:solid black 5px; background-color:purple; border-radius:15px;} th{ font-size: 35px; color:black; border:solid black 5px; background-color:purple; border-radius:15px;} table{margin-left:auto; margin-right: auto;} </style><h1>Total cars shown:" + cars.length + "</h1> <table><tr><th>Manufacturer</th><th>Model</th><th>Year</th><th>Owner</th><th>Hand</th></tr>")
+            for(let i = 0; i < cars.length; i++){
+                document.write("<tr><td>" + cars[i].Manufacturer + "</td><td>" + cars[i].Model + "</td><td>" + cars[i].Year + "</td><td>" + cars[i].Owner + "</td><td>" + cars[i].Hand + "</td></tr>")
+            }
+            document.write("</table>")
+    }
+
+</script>
+</body>
+</html>
